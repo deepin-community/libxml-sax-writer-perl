@@ -1,0 +1,30 @@
+Source: libxml-sax-writer-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: perl,
+                     libxml-filter-buffertext-perl,
+                     libxml-namespacesupport-perl,
+                     libxml-sax-perl
+Standards-Version: 4.0.0
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libxml-sax-writer-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libxml-sax-writer-perl.git
+Homepage: https://metacpan.org/release/XML-SAX-Writer
+
+Package: libxml-sax-writer-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libxml-filter-buffertext-perl,
+         libxml-namespacesupport-perl,
+         libxml-sax-perl
+Description: Perl module for a SAX2 XML writer
+ XML::SAX::Writer helps to serialize SAX2 representations of XML documents to
+ strings, files, and other flat representations. It handles charset encodings,
+ XML escaping conventions, and so forth. It is still considered alpha,
+ although it has been put to limited use in settings such as XML::LibXML and
+ the AxKit XML Application Server.

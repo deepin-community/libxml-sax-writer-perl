@@ -1,0 +1,276 @@
+libxml-sax-writer-perl (0.57-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 14:30:46 +0100
+
+libxml-sax-writer-perl (0.57-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Antonio Radici from Uploaders. Thanks for your work!
+
+  [ Lucas Kanashiro ]
+  * Import upstream version 0.57
+  * Remove all patches, all of them were applied by upstream in the latest
+    version
+  * Bump debhelper compatibility level to 10
+  * Declare compliance with Debian Policy 4.0.0
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Sun, 30 Jul 2017 01:06:06 -0300
+
+libxml-sax-writer-perl (0.56-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Lucas Kanashiro ]
+  * Add debian/upstream/metadata
+  * Import upstream version 0.56
+  * Update and refresh existent patches
+  * Bump debhelper compatibility level to 9
+  * Declare compliance with Debian policy 3.9.6
+  * Add autopkgtest-pkg-perl
+  * Update year of upstream copyright
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Fri, 14 Aug 2015 11:49:31 -0300
+
+libxml-sax-writer-perl (0.54-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * debian/control: remove Nicholas Bamber from Uploaders on request of
+    the MIA team.
+  * Strip trailing slash from metacpan URLs.
+
+  [ Florian Schlichting ]
+  * Import Upstream version 0.54
+  * Update years of upstream copyright
+  * Delete copyright paragraph for inc/* (dropped upstream)
+  * Update stand-alone license paragraphs to commonly used version (not
+    limiting Debian to GNU/Linux, directly linking to GPL-1)
+  * Bump dh compatibility to level 8 (no changes necessary)
+  * Wrap and sort (build-)dependencies
+  * Declare compliance with Debian Policy 3.9.5
+  * Refresh and forward patches, drop combined_pod_fixes.patch and
+    half_code_pod_errors.patch (applied upstream). Closes: #593932
+  * New duplicate_name_section.patch
+  * Add myself to uploaders and copyright
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 07 Mar 2014 20:46:16 +0100
+
+libxml-sax-writer-perl (0.53-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * Remove Florian Ragwitz from Uploaders (closes: #523278).
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * debian/control: Changed: (build-)depend on perl instead of perl-
+    modules.
+  * debian/control: remove version from perl (build) dependency.
+
+  [ Nicholas Bamber ]
+  * New upstream version
+  * Updated control: standards, Uploaders and dependencies
+  * Added source/format, removed README.source, simplified
+    dependencies and modernized rules as quilt is now standard.
+  * Updated copyright
+  * Removed fix_05basic patch as it is no longer required.
+  * Removed consumer_newline.patch as it is no longer required.
+  * Reviewed remaining patches refreshing, editing, folding and
+    adding headers as required.
+  * Applied a pod patch from Frank Wiegand.   
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sun, 22 Aug 2010 20:38:52 +0100
+
+libxml-sax-writer-perl (0.52-1) unstable; urgency=low
+
+  [ Antonio Radici ]
+  * New upstream release
+  * debian/control:
+    + added me to the Uploaders
+    + removed duplicate priority and section field from the binary package
+    + debhelper dependency bumped to 7
+  * debian/patches, the following patches were refreshed:
+    + debian/patches/fix_pod.patch
+    + debian/patches/consumer_newline.patch
+    + debian/patches/convert_errors.patch
+    + debian/patches/fix_05basic_t.patch
+    + debian/patches/file_consumer_encoding.patch
+  * debian/patches/fix_05basic_t.patch:
+    + added the missing description
+  * debian/patches/fix_pod.patch (modified):
+    + fixed some other pod warnings
+  * debian/copyright:
+    + moved to the new format
+    + added inc/* and debian/* copyrights
+  * debian/rules:
+    + refreshed by dh-make-perl
+  * debian/compat: bumped to 7 by dh-make-perl
+
+  [ gregor herrmann ]
+  * debian/control:
+    - switch Vcs-Browser field to ViewSVN
+    - add ${misc:Depends} to Depends: field
+    - mention module name in long description
+    - wrap long lines
+
+ -- Antonio Radici <antonio@dyne.org>  Wed, 25 Feb 2009 00:53:37 +0000
+
+libxml-sax-writer-perl (0.50-2) unstable; urgency=low
+
+  * Take over for the Debian Perl Group with maintainer's permission
+    (http://lists.debian.org/debian-perl/2008/06/msg00039.html)
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Changed:
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> (was: Florian Ragwitz
+    <rafl@debian.org>); Florian Ragwitz <rafl@debian.org> moved to
+    Uploaders.
+  * debian/watch: use dist-based URL.
+  * debian/rules: delete /usr/lib/perl5 only if it exists (closes: #479922).
+  * Switch patch system from dpatch to quilt.
+  * Add /me to Uploaders.
+  * Set Standards-Version to 3.8.0, document quilt usage in
+    debian/README.source.
+  * Set debhelper compatibility level to 5.
+  * debian/copyright: point to a specific download location instead of CPAN at
+    large; add copyright/license for third-party code.
+  * Refresh debian/rules, no functional changes.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 16 Jun 2008 17:55:34 +0200
+
+libxml-sax-writer-perl (0.50-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/rules:
+    + Don't fail when perl is smart enough not to create empty dirs. (Closes:
+      #467767)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sat, 05 Apr 2008 17:22:58 +0200
+
+libxml-sax-writer-perl (0.50-1) unstable; urgency=low
+
+  * New upstream release.
+    + Remove dpatch against t/05basic.t - got merged upstream.
+  * Fix bogous dpatch (Closes: #413480).
+
+ -- Florian Ragwitz <rafl@debian.org>  Sun, 22 Jul 2007 15:51:07 +0200
+
+libxml-sax-writer-perl (0.44-8) unstable; urgency=low
+
+  * Bump Standards-Version to 3.7.2 (no changes).
+  * Split up Build-Depends in Build-Depends and Build-Depends-Indep.
+  * Added dpatch to Build-Depends.
+  * Make dpatches out off all previous patches.
+  * Added debian/patches/convert_errors.dpatch to explain how to handle
+    encoding errors (Closes: #346474).
+  * Changed debian/rules to use dpatch.
+  * Properly clean test files generated by the testsuite.
+
+ -- Florian Ragwitz <rafl@debian.org>  Thu, 15 Jun 2006 18:13:22 +0200
+
+libxml-sax-writer-perl (0.44-7) unstable; urgency=low
+
+  * New Maintainer (Closes: #300238).
+  * Don't install the README. It contains nonrelevant information.
+  * Rewritten debian/rules on top of a dh-make-perl template. Now
+    debian/libxml-sax-writer-perl.install isn't needed anymore.
+  * Removed strange chars from documentation so man(1) is happy again.
+
+ -- Florian Ragwitz <rafl@debian.org>  Mon, 31 Oct 2005 14:51:18 +0100
+
+libxml-sax-writer-perl (0.44-6) unstable; urgency=medium
+
+  * QA Upload
+  * Change maintainer to QA group
+  * Bump Standards-Version to 3.6.2 (no changes)
+  * Use patch from CPAN bug tracking system to fix test failures
+    with newer Text::Iconv versions (Closes: #318550)
+
+ -- Frank Lichtenheld <djpig@debian.org>  Tue, 16 Aug 2005 17:28:32 +0200
+
+libxml-sax-writer-perl (0.44-5) unstable; urgency=low
+
+  * Adds debian/watch file so uscan will work
+
+ -- Jay Bonci <jaybonci@debian.org>  Wed, 27 Oct 2004 16:44:30 -0400
+
+libxml-sax-writer-perl (0.44-4) unstable; urgency=low
+
+  * Fixes dependancy problem on libtest-simple-perl (Closes: #240533)
+  * Uses Test::More, now in perl-modules
+  * Removed dependancy (leaving Build-Depends) on the test module.
+
+ -- Jay Bonci <jaybonci@debian.org>  Mon, 19 Apr 2004 13:38:51 -0400
+
+libxml-sax-writer-perl (0.44-3) unstable; urgency=low
+
+  * New maintainer (Closes: Bug#210544)
+  * Added Jay Bonci as co-maintainer
+  * Add '>:encoding(EncodeTo)' line discipline to FileConsumer to defeat
+    perl's automatic charset conversion.  Thanks to Michael Fowler.
+    (Closes: Bug#196373)
+  * Add trailing newline to xml declaration and to file/handle finalize()
+  * Change quote marks in xml declaration to "" to match most W3C examples
+  * debian/control: upgraded to Debian Policy 3.6.1 (no changes)
+
+ -- Michael K. Edwards <medwards-debian@sane.net>  Mon, 19 Jan 2004 00:41:30 -0800
+
+libxml-sax-writer-perl (0.44-2) unstable; urgency=low
+
+  * debian/rules: moved debhelper compatibility level setting to
+    'debian/compat' per latest debhelper best practices
+  * debian/control: updated sections according to latest archive changes:
+    - 'libxml-sax-writer-perl' from 'interpreters' to 'perl'
+  * debian/control: upgraded build dependency on 'debhelper' to '>= 4.1'
+  * debian/control: upgraded to Debian Policy 3.6.0 (no changes)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Sat,  6 Sep 2003 10:49:29 -0500
+
+libxml-sax-writer-perl (0.44-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: added (build) dependency on 'libxml-filter-buffertext-perl'
+  * debian/rules: upgraded to debhelper v4
+  * debian/control: changed build dependency on debhelper accordingly
+  * debian/rules: migrated from 'dh_movefiles' to 'dh_install'
+  * debian/rules: split off 'install' target from 'binary-indep' target
+  * debian/copyright: added pointer to license
+    (closes: Bug#157677)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Wed, 25 Sep 2002 06:49:11 -0500
+
+libxml-sax-writer-perl (0.39-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: added libtest-simple-perl to build depndencies
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Thu, 21 Feb 2002 21:19:25 -0600
+
+libxml-sax-writer-perl (0.35-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Tue,  1 Jan 2002 09:49:19 -0600
